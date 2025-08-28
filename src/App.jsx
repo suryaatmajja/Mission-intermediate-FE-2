@@ -7,6 +7,7 @@ import {
 import Login from "./pages/login";
 import Register from "./pages/register";
 import Beranda from "./pages/Beranda";
+import DaftarSaya from "./pages/daftarSaya";
 5;
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/beranda" element={<Beranda />} />
+        <Route path="/daftar-saya" element={<DaftarSaya />} />
       </Routes>
     </Router>
   );

@@ -7,13 +7,17 @@ import AllMovie from "../components/allMovie";
 import Footer from "../components/footer";
 
 const Beranda = () => {
-  const menuItems = ["Series", "Film", "Daftar Saya"];
+  const menuItems = [
+    { name: "Series", path: "/#" },
+    { name: "Film", path: "/#" },
+    { name: "Daftar Saya", path: "/daftar-saya" },
+  ];
   return (
     <>
       <NavBar menuItems={menuItems} />
 
       <HeroBaner
-        image="/assets/movie-1.png"
+        image="/assets/Duty-after-hb.png"
         title="Duty After School"
         description="Sebuah benda tak dikenal mengambil alih dunia. Dalam keputusasaan, Departemen Pertahanan mulai merekrut lebih banyak tentara, termasuk siswa sekolah menengah. Mereka pun segera menjadi pejuang garis depan dalam perang."
       />
@@ -25,42 +29,42 @@ const Beranda = () => {
         <div className="overflow-hidden mx-[20px]">
           <ScrollRow>
             <LanjutTonton
-              image="/assets/image-1.png"
+              image="/assets/Dont-look-up-1.png"
               title="Don't Look up"
               rating="4.5/5"
             />
             <LanjutTonton
-              image="/assets/image-2.png"
+              image="/assets/All-of-us-1.png"
               title="The Batman"
               rating="4.2/5"
             />
             <LanjutTonton
-              image="/assets/image-3.png"
+              image="/assets/Blue-lock-1.png"
               title="Blue Lock"
               rating="4.6/5"
             />
             <LanjutTonton
-              image="/assets/image-4.png"
+              image="/assets/A-man-called-1.png"
               title="A Man Called Otto"
               rating="4.4/5"
             />
             <LanjutTonton
-              image="/assets/image-1.png"
+              image="/assets/Dont-look-up-1.png"
               title="Don't Look up"
               rating="4.5/5"
             />
             <LanjutTonton
-              image="/assets/image-2.png"
+              image="/assets/All-of-us-1.png"
               title="The Batman"
               rating="4.2/5"
             />
             <LanjutTonton
-              image="/assets/image-3.png"
+              image="/assets/Blue-lock-1.png"
               title="Blue Lock"
               rating="4.6/5"
             />
             <LanjutTonton
-              image="/assets/image-4.png"
+              image="/assets/A-man-called-1.png"
               title="A Man Called Otto"
               rating="4.4/5"
             />
@@ -76,20 +80,24 @@ const Beranda = () => {
         <div className="overflow-hidden mx-[20px]">
           <AllScroll>
             <AllMovie
-              image="/assets/Top-1.png"
+              image="/assets/Suzume.png"
               alt="Top 1"
               newEpisode="Episode Baru"
             />
-            <AllMovie image="/assets/Top-2.png" alt="Top 2" />
-            <AllMovie image="/assets/Top-3.png" alt="Top 3" />
+            <AllMovie image="/assets/Jurasic.png" alt="Top 2" />
+            <AllMovie image="/assets/All-of-us.png" alt="Top 3" />
             <AllMovie
-              image="/assets/Top-4.png"
+              image="/assets/Sonic.png"
               hoverImage="/assets/Hover-Series.png"
               alt="Top 4"
             />
-            <AllMovie image="/assets/Top-5.png" alt="Top 5" topTen="Top 10" />
-            <AllMovie image="/assets/Top-2.png" alt="Top 2" />
-            <AllMovie image="/assets/Top-3.png" alt="Top 3" />
+            <AllMovie
+              image="/assets/Big-hero.png"
+              alt="Top 5"
+              topTen="Top 10"
+            />
+            <AllMovie image="/assets/Jurasic.png" alt="Top 2" />
+            <AllMovie image="/assets/All-of-us.png" alt="Top 3" />
           </AllScroll>
         </div>
       </div>
@@ -101,13 +109,41 @@ const Beranda = () => {
 
         <div className="overflow-hidden mx-[20px]">
           <AllScroll>
-            <AllMovie image="/assets/Trend-1.png" alt="Top 1" topTen="Top 10" />
-            <AllMovie image="/assets/Trend-2.png" alt="Top 2" topTen="Top 10" />
-            <AllMovie image="/assets/Trend-3.png" alt="Top 3" topTen="Top 10" />
-            <AllMovie image="/assets/Trend-4.png" alt="Top 4" topTen="Top 10" />
-            <AllMovie image="/assets/Trend-5.png" alt="Top 5" topTen="Top 10" />
-            <AllMovie image="/assets/Trend-1.png" alt="Top 2" topTen="Top 10" />
-            <AllMovie image="/assets/Trend-2.png" alt="Top 3" topTen="Top 10" />
+            <AllMovie
+              image="/assets/The-tomorrow.png"
+              alt="Top 1"
+              topTen="Top 10"
+            />
+            <AllMovie
+              image="/assets/Quantumania.png"
+              alt="Top 2"
+              topTen="Top 10"
+            />
+            <AllMovie
+              image="/assets/Guardians.png"
+              alt="Top 3"
+              topTen="Top 10"
+            />
+            <AllMovie
+              image="/assets/A-man-called.png"
+              alt="Top 4"
+              topTen="Top 10"
+            />
+            <AllMovie
+              image="/assets/Litle-mermaid.png"
+              alt="Top 5"
+              topTen="Top 10"
+            />
+            <AllMovie
+              image="/assets/The-tomorrow.png"
+              alt="Top 2"
+              topTen="Top 10"
+            />
+            <AllMovie
+              image="/assets/Quantumania.png"
+              alt="Top 3"
+              topTen="Top 10"
+            />
           </AllScroll>
         </div>
       </div>
@@ -119,21 +155,37 @@ const Beranda = () => {
 
         <div className="overflow-hidden mx-[20px]">
           <AllScroll>
-            <AllMovie image="/assets/Trend-5.png" alt="Top 1" topTen="Top 10" />
             <AllMovie
-              image="/assets/Rilis-2.png"
+              image="/assets/Litle-mermaid.png"
+              alt="Top 1"
+              topTen="Top 10"
+            />
+            <AllMovie
+              image="/assets/Duty-after.png"
               alt="Top 2"
               newEpisode="Episode Baru"
             />
-            <AllMovie image="/assets/Top-5.png" alt="Top 3" topTen="Top 10" />
             <AllMovie
-              image="/assets/Top-4.png"
+              image="/assets/Big-hero.png"
+              alt="Top 3"
+              topTen="Top 10"
+            />
+            <AllMovie
+              image="/assets/All-of-us.png"
               alt="Top 4"
               newEpisode="Episode Baru"
             />
-            <AllMovie image="/assets/Rilis-5.png" alt="Top 5" />
-            <AllMovie image="/assets/Trend-1.png" alt="Top 2" topTen="Top 10" />
-            <AllMovie image="/assets/Trend-2.png" alt="Top 3" topTen="Top 10" />
+            <AllMovie image="/assets/Missing.png" alt="Top 5" />
+            <AllMovie
+              image="/assets/The-tomorrow.png"
+              alt="Top 2"
+              topTen="Top 10"
+            />
+            <AllMovie
+              image="/assets/Quantumania.png"
+              alt="Top 3"
+              topTen="Top 10"
+            />
           </AllScroll>
         </div>
       </div>
@@ -141,10 +193,6 @@ const Beranda = () => {
       <div>
         <Footer />
       </div>
-
-      {/* <div>
-        <FooterDekstop />
-      </div> */}
     </>
   );
 };

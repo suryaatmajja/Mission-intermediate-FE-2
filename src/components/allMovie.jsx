@@ -1,6 +1,6 @@
 const AllMovie = ({ image, alt, topTen, newEpisode }) => {
   return (
-    <div className="relative flex-shrink-0 mt-[64px] mr-[8px] md:w-[234px] md:h-[365px] md:mt-[107px] group">
+    <div className="relative flex-shrink-0 mt-[64px] mr-1 md:w-[234px] md:mr-2.5 md:h-[365px] md:mt-[107px] group">
       {/* Gambar utama */}
       <img
         className="w-[95px] h-full object-cover rounded md:w-[234px]"
@@ -13,7 +13,7 @@ const AllMovie = ({ image, alt, topTen, newEpisode }) => {
         <span
           className="absolute top-0 right-[5px] w-[14.82px] h-[21.28px] 
           rounded-tr-[1.91px] rounded-bl-[1.91px] 
-          px-[1.91px] text-[6.69px] tracking-[0.1px] 
+          px-[10.91px] text-[6.69px] tracking-[0.1px] 
           flex items-center justify-center text-center bg-red-600 text-white
           md:w-[31px] md:h-[48px] md:text-[14px] md:right-[14px] "
         >

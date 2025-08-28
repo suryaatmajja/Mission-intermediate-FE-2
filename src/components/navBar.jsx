@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ menuItems, logo, profileImg }) => {
   const [open, setOpen] = useState(false);
@@ -20,7 +21,11 @@ const Navbar = ({ menuItems, logo, profileImg }) => {
       {/* Menu */}
       <ul className="flex space-x-[12px] text-[10px] tracking-[0.2px] items-center font-lato md:space-x-[80px] md:text-[18px]">
         {menuItems?.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index}>
+            <Link to={item.path} className="cursor-pointer hover:text-blue-500">
+              {item.name}
+            </Link>
+          </li>
         ))}
       </ul>
 
