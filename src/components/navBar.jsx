@@ -56,7 +56,7 @@ const Navbar = ({ menuItems, logo, profileImg }) => {
                   src="/assets/account.png"
                   alt="premium"
                 />
-                <span>Profil Saya</span>
+                <Link to="/profil">Profil Saya</Link>
               </li>
 
               <li className="flex items-center bg-[rgba(24,26,28,1)] w-[113px] h-[32px] text-lato text-[10px] hover:bg-[rgba(40,40,40,1)] hover:text-[rgba(50,84,255,1)] cursor-pointer md:w-[156px] md:h-[40px] md:text-[14px]">
