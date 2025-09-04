@@ -6,6 +6,7 @@ import Logo from "../components/logo";
 
 const Register = () => {
   const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
@@ -13,8 +14,8 @@ const Register = () => {
     e.preventDefault();
 
     // Validasi
-    if (!username || !password) {
-      alert("Username dan password wajib diisi!");
+    if (!username || !email || !password) {
+      alert("Username, email, dan password wajib diisi!");
       return;
     }
 
@@ -24,7 +25,7 @@ const Register = () => {
     }
 
     // Simpan user ke localStorage
-    const newUser = { username, password };
+    const newUser = { username, email, password }; // ✅ simpan juga email
     localStorage.setItem("user", JSON.stringify(newUser));
 
     alert("Registrasi berhasil! Silakan login.");
@@ -38,8 +39,8 @@ const Register = () => {
     >
       <form
         onSubmit={handleRegister}
-        className="bg-[rgba(24,26,28,0.84)] text-white rounded-[8px] w-[306px] h-[452px] 
-        md:w-[530px] md:h-[778px] md:rounded-[16px]"
+        className="bg-[rgba(24,26,28,0.84)] text-white rounded-[8px] w-[306px] h-[500px] 
+        md:w-[530px] md:h-[820px] md:rounded-[16px]" // ✅ perbesar tinggi form sedikit
       >
         <Logo />
 
@@ -51,6 +52,7 @@ const Register = () => {
           Selamat datang!
         </h4>
 
+        {/* Username */}
         <InputField
           label="Username"
           name="username"
@@ -58,6 +60,18 @@ const Register = () => {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
+
+        {/* ✅ Email */}
+        <InputField
+          label="Email"
+          name="email"
+          type="email"
+          placeholder="Masukan Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+
+        {/* Password */}
         <InputPassword
           label="Kata Sandi"
           type="password"
@@ -67,6 +81,7 @@ const Register = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
 
+        {/* Konfirmasi Password */}
         <InputPassword
           label="Konfirmasi Kata Sandi"
           type="password"

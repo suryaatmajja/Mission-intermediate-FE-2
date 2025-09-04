@@ -1,8 +1,33 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const Navbar = ({ menuItems, logo, profileImg }) => {
+const Navbar = ({ menuItems, logo }) => {
   const [open, setOpen] = useState(false);
+  const [profileImg, setProfileImg] = useState("/assets/profil.png");
+
+  // Ambil foto profil dari localStorage
+  useEffect(() => {
+    const savedUser = JSON.parse(localStorage.getItem("user"));
+    if (savedUser?.photo) {
+      setProfileImg(savedUser.photo);
+    }
+  }, []);
+
+  // Dengarkan perubahan localStorage (misalnya dari halaman Profil)
+  useEffect(() => {
+    const handleStorageChange = () => {
+      const savedUser = JSON.parse(localStorage.getItem("user"));
+      if (savedUser?.photo) {
+        setProfileImg(savedUser.photo);
+      } else {
+        setProfileImg("/assets/profil.png");
+      }
+    };
+
+    window.addEventListener("storage", handleStorageChange);
+    return () => window.removeEventListener("storage", handleStorageChange);
+  }, []);
+
   return (
     <nav className="relative z-20 bg-[rgba(24,26,28,1)] bg-cover bg-center h-[56px] text-white flex items-center px-4 md:px-[80px] md:h-[94px]">
       {/* Logo */}
@@ -12,7 +37,6 @@ const Navbar = ({ menuItems, logo, profileImg }) => {
           src={logo || "/assets/movie-open.png"}
           alt="logo"
         />
-
         <h1 className="hidden md:block md:font-londrina-solid md:text-[32px] md:mr-[80px] ">
           CHILL
         </h1>
@@ -34,8 +58,8 @@ const Navbar = ({ menuItems, logo, profileImg }) => {
       {/* Profile */}
       <div className="relative flex items-center">
         <img
-          className="w-[20px] h-[20px] mr-[2px] md:w-[40px] md:h-[40px]"
-          src={profileImg || "/assets/profil.png"}
+          className="w-[20px] h-[20px] mr-[2px] md:w-[40px] md:h-[40px] rounded-full object-cover"
+          src={profileImg}
           alt="profil"
         />
 
@@ -58,7 +82,6 @@ const Navbar = ({ menuItems, logo, profileImg }) => {
                 />
                 <Link to="/profil">Profil Saya</Link>
               </li>
-
               <li className="flex items-center bg-[rgba(24,26,28,1)] w-[113px] h-[32px] text-lato text-[10px] hover:bg-[rgba(40,40,40,1)] hover:text-[rgba(50,84,255,1)] cursor-pointer md:w-[156px] md:h-[40px] md:text-[14px]">
                 <img
                   className="w-[16px] h-[16px] mr-[4px] ml-[12px] md:w-[24px] md:h-[24px]"
@@ -67,7 +90,6 @@ const Navbar = ({ menuItems, logo, profileImg }) => {
                 />
                 <span>Ubah Premium</span>
               </li>
-
               <li className="flex items-center bg-[rgba(24,26,28,1)] w-[113px] h-[32px] text-lato text-[10px] hover:bg-[rgba(40,40,40,1)] hover:text-[rgba(50,84,255,1)] cursor-pointer md:w-[156px] md:h-[40px] md:text-[14px]">
                 <img
                   className="w-[16px] h-[16px] mr-[4px] ml-[12px] md:w-[24px] md:h-[24px]"
