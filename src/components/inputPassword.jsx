@@ -20,8 +20,8 @@ const InputPassword = ({ label, name, placeholder, value, onChange }) => {
         type={showPassword ? "text" : "password"}
         name={name}
         placeholder={placeholder}
-        value={value} // <- penting biar React state terbaca
-        onChange={onChange} // <- penting biar React bisa update state
+        value={value}
+        onChange={onChange}
       />
       <img
         className="absolute w-[12px] h-[12px] -mt-[20px] mx-[260px] cursor-pointer

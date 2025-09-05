@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; // ✅ import navigate
+import { useNavigate } from "react-router-dom";
 import NavBar from "../components/navBar";
 import FormProfil from "../components/formProfil";
 import EditProfil from "../components/editProfil";
@@ -10,12 +10,12 @@ const Profil = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [photo, setPhoto] = useState("/assets/poto-profil.png"); // hanya untuk Profil Saya
+  const [photo, setPhoto] = useState("/assets/poto-profil.png");
 
   // Foto berlangganan tetap fix
   const [subscribePhoto] = useState("/assets/Belum-berlangganan.png");
 
-  const navigate = useNavigate(); // ✅ inisialisasi navigate
+  const navigate = useNavigate();
 
   // Ambil data user dari localStorage
   useEffect(() => {
@@ -35,7 +35,7 @@ const Profil = () => {
     alert("Profil berhasil disimpan!");
   };
 
-  // ➡️ Tombol Tambah Akun langsung ke halaman registrasi
+  // Tombol Tambah Akun langsung ke halaman registrasi
   const handleAddAccount = () => {
     navigate("/register");
   };
@@ -120,7 +120,7 @@ const Profil = () => {
               Simpan
             </button>
             <button
-              onClick={handleAddAccount} // ✅ langsung ke /register
+              onClick={handleAddAccount}
               className="bg-[rgba(231,227,252,0.23)] cursor-pointer hover:bg-[rgba(9,20,122,1)]  rounded-full mt-6.5 text-sm w-25 h-8 mr-2 md:text-base md:font-bold md:w-37.5 md:h-10.5 md:mr-4 md:mt-8 "
             >
               Tambah Akun
@@ -141,12 +141,39 @@ const Profil = () => {
           </h1>
 
           <div className="flex flex-wrap gap-4.5 pl-4.5 pt-10 pb-10 md:pl-20 md:pt-35">
-            <MyList image="/assets/All-of-us.png" alt="trend" />
-            <MyList image="/assets/My-hero.png" alt="trend" />
-            <MyList image="/assets/Blue-lock.png" alt="trend" />
-            <MyList image="/assets/Ted-laso.png" alt="trend" />
-            <MyList image="/assets/Duty-after.png" alt="trend" />
-            <MyList image="/assets/Suzume.png" alt="trend" />
+            <MyList
+              image="/assets/All-of-us.png"
+              alt="trend"
+              topTen="Top 10"
+              newEpisode="Episode Baru"
+            />
+            <MyList
+              image="/assets/My-hero.png"
+              alt="trend"
+              newEpisode="Episode Baru"
+            />
+            <MyList
+              image="/assets/Blue-lock.png"
+              alt="trend"
+              newEpisode="Episode Baru"
+            />
+            <MyList
+              image="/assets/Ted-laso.png"
+              alt="trend"
+              newEpisode="Episode Baru"
+            />
+            <MyList
+              image="/assets/Duty-after.png"
+              alt="trend"
+              topTen="Top 10"
+              newEpisode="Episode Baru"
+            />
+            <MyList
+              image="/assets/Suzume.png"
+              alt="trend"
+              topTen="Top 10"
+              newEpisode="Episode Baru"
+            />
           </div>
         </div>
         <Footer />

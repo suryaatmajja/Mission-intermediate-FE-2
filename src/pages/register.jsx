@@ -25,11 +25,11 @@ const Register = () => {
     }
 
     // Simpan user ke localStorage
-    const newUser = { username, email, password }; // ✅ simpan juga email
+    const newUser = { username, email, password };
     localStorage.setItem("user", JSON.stringify(newUser));
 
     alert("Registrasi berhasil! Silakan login.");
-    window.location.href = "/login"; // redirect ke login
+    window.location.href = "/login";
   };
 
   return (
@@ -40,7 +40,7 @@ const Register = () => {
       <form
         onSubmit={handleRegister}
         className="bg-[rgba(24,26,28,0.84)] text-white rounded-[8px] w-[306px] h-[500px] 
-        md:w-[530px] md:h-[820px] md:rounded-[16px]" // ✅ perbesar tinggi form sedikit
+        md:w-[530px] md:h-[825px] md:rounded-[16px]"
       >
         <Logo />
 
@@ -61,7 +61,7 @@ const Register = () => {
           onChange={(e) => setUsername(e.target.value)}
         />
 
-        {/* ✅ Email */}
+        {/* Email */}
         <InputField
           label="Email"
           name="email"

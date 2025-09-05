@@ -11,13 +11,13 @@ const EditProfil = ({
       <label className="block pt-1.5 text-sm md:text-base mx-4">{label}</label>
 
       <input
-        className="w-[256px] text-white border-none
-        font-lato text-base mx-4 md:text-lg"
+        className="w-[256px] text-white border-none outline-none focus:ring-0 focus:border-none
+        font-lato text-base mx-4 md:text-lg bg-[rgba(34,40,42,1)]"
         type={type}
         name={name}
         placeholder={placeholder}
-        value={value} // <- penting biar state React terbaca
-        onChange={onChange} // <- penting supaya bisa update state
+        value={value}
+        onChange={onChange}
       />
 
       <img

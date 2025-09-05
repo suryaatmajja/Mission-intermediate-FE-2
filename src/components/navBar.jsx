@@ -13,7 +13,7 @@ const Navbar = ({ menuItems, logo }) => {
     }
   }, []);
 
-  // Dengarkan perubahan localStorage (misalnya dari halaman Profil)
+  // perubahan localStorage
   useEffect(() => {
     const handleStorageChange = () => {
       const savedUser = JSON.parse(localStorage.getItem("user"));

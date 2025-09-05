@@ -21,75 +21,56 @@ const DaftarSaya = () => {
           <MyList
             image="/assets/All-of-us.png"
             alt="trend"
-            topTen=""
-            newEpisode="Episode "
+            topTen="Top 10"
+            newEpisode="Episode Baru"
           />
-          <MyList
-            image="/assets/Baymax.png"
-            alt="trend"
-            topTen=""
-            newEpisode=""
-          />
+
+          <MyList image="/assets/Baymax.png" alt="trend" />
+
           <MyList
             image="/assets/My-hero.png"
             alt="trend"
-            topTen=""
-            newEpisode=""
+            newEpisode="Episode Baru"
           />
+
           <MyList
             image="/assets/Blue-lock.png"
             alt="trend"
-            topTen=""
-            newEpisode=""
+            newEpisode="Episode Baru"
           />
+
           <MyList
             image="/assets/Ted-laso.png"
             alt="trend"
-            topTen=""
-            newEpisode=""
+            topTen="Top 10"
+            newEpisode="Episode Baru"
           />
+
           <MyList
             image="/assets/Duty-after.png"
             alt="trend"
-            topTen=""
-            newEpisode=""
+            topTen="Top 10"
+            newEpisode="Episode Baru"
           />
+
           <MyList
             image="/assets/Suzume.png"
             alt="trend"
-            topTen=""
+            topTen="Top 10"
             newEpisode=""
           />
+
           <MyList
             image="/assets/Guardians.png"
             alt="trend"
-            topTen=""
+            topTen="Top 10"
             newEpisode=""
           />
-          <MyList
-            image="/assets/Spiderman.png"
-            alt="trend"
-            topTen=""
-            newEpisode=""
-          />
-          <MyList
-            image="/assets/Sonic.png"
-            alt="trend"
-            topTen=""
-            newEpisode=""
-          />
-          <MyList
-            image="/assets/Megan.png"
-            alt="trend"
-            topTen=""
-            newEpisode=""
-          />
-          <MyList
-            image="/assets/Dilan.png"
-            alt="trend"
-            topTen=""
-            newEpisode=""
-          />
+
+          <MyList image="/assets/Spiderman.png" alt="trend" />
+          <MyList image="/assets/Sonic.png" alt="trend" />
+          <MyList image="/assets/Megan.png" alt="trend" />
+          <MyList image="/assets/Dilan.png" alt="trend" />
         </div>
 
         <Footer />

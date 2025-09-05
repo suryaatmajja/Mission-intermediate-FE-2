@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 const FormProfil = () => {
   const [photo, setPhoto] = useState("/assets/poto-profil.png");
 
-  // Ambil foto dari localStorage saat pertama kali render
   useEffect(() => {
     const savedUser = JSON.parse(localStorage.getItem("user"));
     if (savedUser?.photo) {
